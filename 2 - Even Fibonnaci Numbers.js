@@ -9,17 +9,20 @@
 let fibonacci = [1, 2];
 let evenNumbers = [2];
 
-for(i = 1; i <= 10 ; i++) {
+for(i = 1; i <= 400 ; i++) {
     const length = fibonacci.length;
     const newTerm = fibonacci[length - 1] + fibonacci[length - 2]
     if (i !== 0 || i !== 1 || i !== 2) {
         fibonacci.push(newTerm)
     }
+    if (newTerm >= 4000000) {
+        break
+    }
     if (newTerm % 2 === 0) {
         evenNumbers.push(newTerm)
-        console.log(newTerm)
     }
-    
+
 };
 
 const sumEvenNumbers = evenNumbers.reduce( (acc, value) => acc + value);
+console.log(sumEvenNumbers);
