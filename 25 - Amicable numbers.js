@@ -32,4 +32,4 @@ for (let i = 1; i < 10000; i++) {
     }
 }
   
-console.log(sumOfAllAmicables);
+console.log('The sum of all the amicable numbers under 10000 is: ' + sumOfAllAmicables);
